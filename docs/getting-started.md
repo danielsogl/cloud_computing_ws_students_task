@@ -7,6 +7,10 @@ Getting Started
 * [Login to Cloud Foundry](#login-to-cf)
 * [Push to Cloud Foundry](#push-to-cf)
 * [Delete the app from Cloud Foundry](#delete-the-app)
+* [Create a Docker Image](#create-docker-img)
+* [Run Docker Container](#run-docker-container)
+* [Delete Docker Container](#delete-docker-container)
+
 
 ### <a name="prerequisites"></a> Prerequisites App
 
@@ -74,4 +78,28 @@ Execute
 
 ```
 cf delete the-app-name
+```
+
+### <a name="create-docker-img"/> Create a Docker Image
+
+Run the build command to build the docker image via the Dockerfile
+
+```
+docker build -t name-your-image .
+```
+
+### <a name="run-docker-container"/> Run Docker Container
+
+Run the created docker image with
+
+```
+docker run --name your-container-name -p 80:3000 -e "MONGO_DB=the-mongo-uri-to-set" -it your-image-name
+```
+
+### <a name="delete-docker-container"/> Delete Docker Container
+
+Delete the created docker container with
+
+```
+docker rm your-container-name
 ```
