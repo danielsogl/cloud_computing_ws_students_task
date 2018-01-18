@@ -1,0 +1,28 @@
+{
+  "name": "dhbw-gameserver",
+  "description": "DHBW Demo",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": "Hai Dang Le <lhdang.88@gmail.com>",
+  "main": "index.js",
+  "engines": {
+    "node": "^8.0.0",
+    "npm": "^5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Lhdang88/cloud_computing_ws_demo.git"
+  },
+  "scripts": {
+    "start": "./node_modules/.bin/nodemon index.js"
+  },
+  "dependencies": {
+    "express": "^4.15.3",
+    "express-basic-auth": "^1.1.1",
+    "body-parser": "^1.17.2",
+    "mongodb": "^2.2.24"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.11"
+  }
+}
