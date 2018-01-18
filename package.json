@@ -1,6 +1,6 @@
 {
-  "name": "dhbw-gameserver",
-  "description": "DHBW Demo",
+  "name": "dhbw-gameclient",
+  "description": "DHBW Students Demo",
   "version": "0.1.0",
   "license": "MIT",
   "author": "Hai Dang Le <lhdang.88@gmail.com>",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Lhdang88/cloud_computing_ws_demo.git"
+    "url": "https://github.com/Lhdang88/cloud_computing_ws_students_task.git"
   },
   "scripts": {
     "start": "./node_modules/.bin/nodemon index.js"
