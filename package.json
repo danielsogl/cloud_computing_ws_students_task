@@ -14,7 +14,8 @@
     "url": "https://github.com/Lhdang88/cloud_computing_ws_students_task.git"
   },
   "scripts": {
-    "start": "./node_modules/.bin/nodemon index.js"
+    "start": "./node_modules/.bin/nodemon index.js",
+    "deploy": "cf push"
   },
   "dependencies": {
     "express": "^4.15.3",
