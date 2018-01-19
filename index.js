@@ -21,7 +21,8 @@ app.use(bodyParser.json());
 // start the http-server on port:xxxx
 app.listen(env.port, function() {
   console.log(`App is listening on port ${env.port}`);
-  db.init();
+  //uncomment if db-connection is needed
+  //db.init();
 });
 
 // register APIs - register all files under /lib/api/...
@@ -32,7 +33,7 @@ api.registerAPIs(app);
  */
 function exitHandler(process, event, err) {
   console.warn(`Event ${event.type} received. ${err}`);
-
+  /**
   // closeDB Connection if present
   db.close()
   .catch(function (err) {
@@ -45,6 +46,11 @@ function exitHandler(process, event, err) {
       process.exit();
     }
   });
+  **/
+  if(event.exit) {
+    console.log(`Shutting down app on ${env.hostname} ...`);
+    process.exit();
+  }
 }
 
 // Catches ctrl+c event
